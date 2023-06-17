@@ -1,0 +1,27 @@
+.gateway{
+    padding-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-gateway{
+    width: 20rem;
+}
+.gateway-msg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.7rem;
+    color: var(--PRIMARY-COLOR-DARK);
+}
+.thanks{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.redirection{
+    margin-top: 6rem;
+    font-size: 1.5rem;
+}

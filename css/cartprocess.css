@@ -1,0 +1,37 @@
+body {
+    padding: 5rem 20rem;
+}
+.address-label{
+    font-size: 2rem;
+    margin-bottom: -1rem;
+    margin-top: 5rem;
+    color: var(--PRIMARY-COLOR-DARK);
+}
+.address{
+    width: 50%;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--PRIMARY-COLOR-DARK);
+    margin: 3rem 0;
+    outline: none;
+    border-radius: 10px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem;
+}
+.confirm-order{
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.or{
+    font-size: 1.5rem;
+    margin: 1rem;
+}
+    
+.model-data__input{
+    margin-bottom: 1.5rem;
+}

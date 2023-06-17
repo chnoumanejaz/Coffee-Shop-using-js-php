@@ -1,0 +1,194 @@
+/* Responsive only for the mobiles */
+
+
+@media only screen and (max-width: 37.5em) {
+
+    /* Overall font effect */
+    html {
+        font-size: 45%;
+    }
+
+    /* nav Bar responsive for Phone */
+    .nav {
+        font-size: 1.5rem;
+        flex-direction: column;
+        gap: 2rem;
+        justify-content: center;
+        padding: 1rem 0;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .nav__list {
+        gap: 2rem;
+    }
+
+    /* experimental */
+    /* .nav__item:first-child {
+        margin-left: -10rem;
+    } */
+
+    .nav__item:last-child {
+        margin-left: 2rem;
+    }
+
+}
+
+
+/* Cover section for mobile */
+@media only screen and (max-width: 37.5em) {
+    .cover {
+        width: 100%;
+        height: 87vh;
+    }
+
+    .cover__para {
+        font-size: 2rem;
+        width: 140%;
+    }
+
+    .cover__explore {
+        top: 40%;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+}
+
+/* Popular section for mobile */
+@media only screen and (max-width: 37.5em) {
+
+    .popular__head,
+    .menu__head {
+        align-items: left;
+        font-size: 2.5rem;
+    }
+
+    .row {
+        overflow-x: scroll;
+    }
+
+    .popular,
+    .menu {
+        padding: 2rem;
+    }
+
+    .popular__item--img {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .popular__card::before {
+        transform: translateY(0rem);
+    }
+
+    .popular__card:hover::before {
+        opacity: 0;
+    }
+
+    .popular__card:hover {
+        transform: translateY(0rem);
+    }
+
+}
+
+/* Menu section for mobile */
+@media only screen and (max-width: 37.5em) {
+    th {
+        padding: 1rem;
+    }
+
+    td {
+        padding-left: none;
+        border: none;
+    }
+
+    .input__post {
+        width: 170%;
+    }
+
+    .rs {
+        top: 1rem;
+        left: 9.6rem;
+    }
+
+    .tabel__row {
+        display: flex;
+        align-items: center;
+        margin-left: -2rem;
+    }
+
+    .mobile-style {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: .3rem;
+    }
+
+    .btn-mini {
+        border-radius: 2px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 2rem;
+        height: 2rem;
+        font-size: 1.4rem;
+    }
+
+    .btn-cart {
+        border-radius: 2px;
+        font-weight: normal;
+        width: 5rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+/* Footer section for mobile */
+@media only screen and (max-width: 37.5em) {
+    .footer {
+        height: auto;
+        padding: 3rem;
+        flex-wrap: wrap;
+    }
+
+    .footer__list {
+        line-height: 3rem;
+    }
+
+    .footer__right {
+        margin: 0 auto;
+        margin-top: 3rem;
+        text-align: center;
+    }
+}
+
+/* Models section for mobile */
+@media only screen and (max-width: 37.5em) {
+
+    .model,
+    .model-cheff,
+    .model-acc,
+    .model-cart {
+        padding: 5rem 2rem;
+        width: 95%;
+        left: 1rem;
+        height: auto;
+    }
+
+    .btn--close,
+    .btn--close-cart {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .model-cheff__input {
+        width: 70%;
+    }
+
+    
+}

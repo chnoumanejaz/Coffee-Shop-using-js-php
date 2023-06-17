@@ -1,0 +1,111 @@
+/* Responsive only for the mobiles */
+
+/* Dashboard of cheff and accountant */
+@media only screen and (max-width: 37.5em) {
+    .dashboard {
+        width: 100%;
+        height: 14vh;
+    }
+
+    .dashboard__menu {
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: .5rem;
+        padding: 1rem;
+    }
+
+    .dashboard__image {
+        width: 25%;
+    }
+
+    .dashboard__image-chef {
+        width: 15%;
+    }
+
+    .dashboard__name {
+        font-size: 1.2rem;
+        margin-left: .5rem;
+    }
+
+    .dashboard__btns {
+        margin-top: 1rem;
+    }
+
+    .btn-orders,
+    .btn-logout {
+        width: auto;
+        margin-bottom: 1rem;
+        margin-left: 1rem;
+        padding: .5rem;
+        font-size: 1.3rem;
+    }
+
+    .area {
+        padding: 10rem 1.5rem 1rem 1.5rem;
+        font-size: 1.5rem;
+    }
+
+    .area-msg__heading {
+        font-size: 3rem;
+    }
+
+    .thHead {
+        font-size: 2rem;
+    }
+
+    th,
+    td {
+        font-size: 1.5rem;
+    }
+}
+
+/* Cart process Page Responsive for phones */
+@media only screen and (max-width: 37.5em) {
+    body {
+        padding: 5rem 1rem;
+    }
+
+    .confirm-order {
+        font-size: 1.3rem;
+        width: 80%;
+    }
+
+    .browse-more {
+        width: 80%;
+    }
+
+    .model-data {
+        padding: 5rem 2rem;
+        width: 95%;
+        left: 1rem;
+        height: auto;
+    }
+
+    .btn--close {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .model-data__input {
+        width: 100%;
+    }
+
+    .complete-order-btn {
+        width: 100%;
+        font-size: 1.3rem
+    }
+
+}
+
+/* Gateway Responsive for phones only */
+@media only screen and (max-width: 37.5em) {
+    .redirection {
+        padding: 1rem;
+        font-size: 1.3rem;
+    }
+}
+
+/* general */
+.area-data {
+    overflow-x: scroll;
+}
