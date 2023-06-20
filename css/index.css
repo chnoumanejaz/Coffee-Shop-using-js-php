@@ -14,7 +14,7 @@ html {
 }
 
 body {
-    background-color: var(--BG-COLOR)
+    background-color: var(--BG-COLOR);
 }
 
 /* Variables for All the colors */
@@ -25,12 +25,13 @@ body {
     --PRIMARY-COLOR-LIGHT-OPAC: rgba(223, 149, 241, 0.781);
     --PRIMARY-COLOR-LIGHT: rgb(226, 149, 241);
     --PRIMARY-COLOR-LIGHT2: rgb(233, 195, 245);
+    --CART-COLOR: #efa7f8;
 
     --BG-COLOR: rgb(240, 221, 241);
 
     --LINEAR-LIGHT: rgba(127, 54, 145, 0.918);
     --LINEAR-DARK: rgba(0, 0, 0, 0.747);
-
+    --LINKEDIN: #000;
     --BOX-SHADOW: 0 10px 25px rgba(0, 0, 0, .2);
 }
 
@@ -407,6 +408,7 @@ td {
     align-items: center;
     font-size: 1.5rem;
     color: #fff;
+    transition: all .5s;
 }
 
 .footer__list {
@@ -463,10 +465,9 @@ td {
 }
 
 .linkedin {
-    color: white;
+    color: var(--LINKEDIN);
     font-weight: bold;
     text-decoration: none;
-    color: #000;
     transition: all .2s;
     margin-left: 1rem;
 }
@@ -509,7 +510,7 @@ td {
 }
 
 .model-cart {
-    background-image: linear-gradient(to right, var(--PRIMARY-COLOR-LIGHT2), #efa7f8)
+    background-image: linear-gradient(to right, var(--PRIMARY-COLOR-LIGHT2), var(--CART-COLOR))
 }
 
 .btn--close,
@@ -806,6 +807,7 @@ td {
     margin-bottom: -.35rem;
 }
 
+
 .svg-pri {
     fill: var(--PRIMARY-COLOR-LIGHT);
 }
@@ -840,4 +842,92 @@ td {
 
 .success {
     background-color: rgb(90, 204, 99);
+}
+
+/* Theme Management */
+.themeSetting {
+    position: fixed;
+    top: 8rem;
+    right: 2.5rem;
+    z-index: 10;
+}
+
+.themeDrop {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+    transition: all .5s;
+}
+
+.settingBtn {
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    transition: all .7s;
+}
+
+.settingBtn img {
+    filter: invert(60%);
+}
+
+.BlackBtn {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: #000;
+    transition: all .3s;
+}
+
+.defaultBtn {
+    cursor: pointer;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    background-color: rgb(236, 142, 54);
+    transition: all .3s;
+}
+
+.BlackBtn:hover,
+.defaultBtn:hover {
+    transform: scale(.7);
+}
+
+.defaultBtn:hover {
+    border: 4px solid black;
+}
+
+.BlackBtn:hover {
+    border: 4px solid var(--PRIMARY-COLOR-DARK);
+}
+
+.BlackBtn:active,
+.defaultBtn:active {
+    transform: scale(1.5);
+    filter: blur(2px);
+}
+
+.settingBtn:hover {
+    transform: rotate(90deg);
+}
+
+.svg-setting {
+    width: 2.5rem;
+    height: 2.5rem;
+    fill: var(--PRIMARY-COLOR-DARK);
+    transition: all .3s;
+    filter: drop-shadow(0px 10px 20px rgba(0, 0, 0, .8));
+}
+
+.svg-setting:active {
+    transform: translateX(-.5rem);
+    filter: blur(2px);
+}
+
+.hideThemeMenu {
+    opacity: 0;
+    transform: scale(.2) translateY(5rem);
+    visibility: hidden;
 }

@@ -241,7 +241,126 @@ cartpageBTN?.addEventListener('click', function () {
 // alerting out of stock items
 const btnDisable = document.querySelectorAll('.btn-disable');
 btnDisable.forEach(b => {
-  b.addEventListener('click', function () {
-    showError('This Item is Out of Stock!');
+  b.addEventListener('click', function (e) {
+    e.preventDefault();
+    showError('This Item is Out of Stock! ');
   });
 });
+
+// Theme Management
+const themeSetting = document.querySelector('.themeSetting');
+const themeDrop = document.querySelector('.themeDrop');
+const settingBtn = document.querySelector('.settingBtn');
+const htmlClose = `<img src="img/icons/cross-23.svg" alt="" class="svg-setting"></img>`;
+const htmlSetting = `<svg class="svg-setting">
+                      <use xlink:href="img/sprite2.svg#icon-cog"></use>
+                    </svg>`;
+
+themeSetting.addEventListener('click', function (e) {
+  const sBtn = e.target.closest('.svg-setting');
+  const cBtn = e.target.closest('img');
+  if (!sBtn) return;
+  themeDrop.classList.toggle('hideThemeMenu');
+  if (sBtn) {
+    setTimeout(function () {
+      settingBtn.innerHTML = htmlClose;
+    }, 300);
+  }
+  if (cBtn) {
+    setTimeout(function () {
+      settingBtn.innerHTML = htmlSetting;
+    }, 300);
+  }
+});
+
+const themeDropDown = document.querySelector('.themeDrop');
+
+themeDropDown.addEventListener('click', function (e) {
+  if (e.target.closest('.BlackBtn')) {
+    loadBlackTheme();
+    localStorage.setItem('theme', 'black');
+  }
+  if (e.target.closest('.defaultBtn')) {
+    loadOrangeTheme();
+    localStorage.setItem('theme', 'orange');
+  }
+});
+
+// loading theme on starttup
+const defaultUserTheme = function () {
+  const defTheme = localStorage.getItem('theme');
+  if (defTheme === 'black') {
+    loadBlackTheme();
+  }
+  if (defTheme === 'orange') {
+    loadOrangeTheme();
+  }
+};
+defaultUserTheme();
+
+// Themes Coloring
+function loadBlackTheme() {
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-DARK',
+    'rgb(12, 12, 12)'
+  );
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-DARK-OPAC',
+    'rgba(32, 32, 32, 0.911)'
+  );
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-LIGHT-OPAC',
+    'rgba(97, 97, 97, 0.781)'
+  );
+
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-LIGHT',
+    'rgb(97, 97, 97)'
+  );
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-LIGHT2',
+    'rgb(129, 129, 129)'
+  );
+  document.documentElement.style.setProperty('--CART-COLOR', '#acacac');
+  document.documentElement.style.setProperty(
+    '--BG-COLOR',
+    'rgb(189, 189, 189)'
+  );
+  document.documentElement.style.setProperty(
+    '--LINEAR-LIGHT',
+    'rgb(170, 170, 170)'
+  );
+  document.documentElement.style.setProperty('--LINKEDIN', '#fff');
+}
+function loadOrangeTheme() {
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-DARK',
+    'rgb(236, 142, 54)'
+  );
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-DARK-OPAC',
+    'rgba(236, 163, 54, 0.911)'
+  );
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-LIGHT-OPAC',
+    'rgba(241, 219, 149, 0.781)'
+  );
+
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-LIGHT',
+    'rgb(241, 212, 149)'
+  );
+  document.documentElement.style.setProperty(
+    '--PRIMARY-COLOR-LIGHT2',
+    'rgb(245, 238, 195)'
+  );
+  document.documentElement.style.setProperty('--CART-COLOR', '#fcd48b');
+  document.documentElement.style.setProperty(
+    '--BG-COLOR',
+    'rgb(241, 232, 221)'
+  );
+  document.documentElement.style.setProperty(
+    '--LINEAR-LIGHT',
+    'rgba(145, 113, 54, 0.918)'
+  );
+}

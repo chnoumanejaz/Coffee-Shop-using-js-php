@@ -13,6 +13,18 @@ session_start();
 </head>
 
 <body>
+  <div class="themeSetting">
+    <button class="settingBtn">
+      <svg class="svg-setting">
+        <use xlink:href="img/sprite2.svg#icon-cog"></use>
+      </svg>
+    </button>
+    <div class="themeDrop hideThemeMenu">
+      <div class="BlackBtn"></div>
+      <div class="defaultBtn"></div>
+    </div>
+  </div>
+
   <header class="header">
     <nav class="nav">
       <div class="nav__logo">
@@ -728,7 +740,6 @@ session_start();
       This is success
     </div>
   </section>
-
   <script src="js/index.js"></script>
 </body>
 
