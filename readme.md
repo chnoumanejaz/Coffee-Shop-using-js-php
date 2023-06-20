@@ -19,12 +19,12 @@ Save it to your Php server directory Xampp or Wamp
 Import the DataBase to PhpmyAdmin
 
 ```bash
-  git Database is given in the database folder
+   Database is given in the database folder
 ```
 
 Start the server main file is 
 ```bash
-  git index.php
+  index.php
 ```
 
 # Have a look: (Demo)
