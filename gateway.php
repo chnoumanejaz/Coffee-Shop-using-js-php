@@ -54,7 +54,15 @@ if (isset($_SESSION['cart'])) {
         <?php
     }
     ?>
-    <script src="js/gateway.js"></script>
+    <script>
+        // Page redirection after order success 1.5sec
+        const redirect = function () {
+            setTimeout(function () {
+                window.open('index.php', '_self');
+            }, 1500);
+        };
+        redirect();
+    </script>
 </body>
 
 </html>

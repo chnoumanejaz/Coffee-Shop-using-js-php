@@ -495,8 +495,9 @@ td {
 .model-cheff,
 .model-data,
 .model-acc,
-.model-cart {
-    padding: 10rem;
+.model-cart,
+.model-login {
+    padding: 5rem;
     background-image: linear-gradient(to bottom right, var(--PRIMARY-COLOR-DARK-OPAC) 45%, var(--PRIMARY-COLOR-LIGHT) 50%);
     border-radius: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, .7);
@@ -930,4 +931,33 @@ td {
     opacity: 0;
     transform: scale(.2) translateY(5rem);
     visibility: hidden;
+}
+
+/* back icon */
+.back{
+    transform: rotate(180deg);
+}
+/* new additions */
+
+.form_credentials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.labbell{
+    font-size: 1.7rem;
+    color: #fff;
+}
+.divve{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 3rem;
+}
+.updateinp{
+    flex-grow: 1;
 }

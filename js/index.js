@@ -2,29 +2,12 @@
 
 // --------------------------------------------
 // Login Button
-const btnLogin = document.querySelector('.login-btn');
+const btnLogout = document.querySelector('.logout-btn');
+const btnMyAcc = document.querySelector('.myacc-btn');
 
 // models appear when click on login
 const btnClose = document.querySelector('.btn--close');
 const overlay = document.querySelector('.overlay');
-const model = document.querySelector('.model');
-const modelCheff = document.querySelector('.model-cheff');
-const modelAcc = document.querySelector('.model-acc');
-const btnCustomer = document.querySelector('#Customer');
-
-// For Cheff
-const code = document.querySelector('.code');
-const codeValid = document.querySelector('.code-valid');
-const cheffValid = document.querySelector('.cheff-valid');
-const loginCheff = document.querySelector('.loginCheff');
-const loginBtn = document.querySelector('.loginbtn');
-
-// For Accountant
-const codeAcc = document.querySelector('.codeacc');
-const codeValidacc = document.querySelector('.code-validacc');
-const accValid = document.querySelector('.acc-valid');
-const loginBtnAcc = document.querySelector('.loginbtnacc');
-const loginAcc = document.querySelector('.loginAcc');
 
 // copyright Year
 const copyYear = document.querySelector('.copyYear');
@@ -43,24 +26,6 @@ const successMsg = document.querySelector('.success');
 
 // --------------------------------------------
 // functions
-// open Close main Model
-const toggelModel = function () {
-  model.classList.toggle('hidden');
-  overlay.classList.toggle('hidden');
-};
-
-// open Close cheff Model
-const toggelCheffModel = function () {
-  modelCheff.classList.toggle('hidden');
-  overlay.classList.toggle('hidden');
-};
-
-// open Close accontant Model
-const toggelAccModel = function () {
-  modelAcc.classList.toggle('hidden');
-  overlay.classList.toggle('hidden');
-};
-
 // open Close cart Model
 const toggelCartModel = function () {
   modelCart.classList.toggle('hidden');
@@ -96,7 +61,7 @@ const showSuccess = function (msg) {
   }, 2500);
 };
 
-// Generate random CODE to login and for order No.
+// Generate random CODE for order No.
 function generateRandomCode() {
   const randomNumber = Math.floor(Math.random() * 1000000);
   const paddedNumber = String(randomNumber).padStart(6, '0');
@@ -104,16 +69,8 @@ function generateRandomCode() {
 }
 
 // handling models by events
-btnLogin.addEventListener('click', toggelModel);
-btnClose.addEventListener('click', function (e) {
-  e.preventDefault();
-  toggelModel();
-});
-btnCustomer.addEventListener('click', toggelModel);
+
 overlay.addEventListener('click', function () {
-  if (!model.classList.contains('hidden')) toggelModel();
-  if (!modelCheff.classList.contains('hidden')) toggelCheffModel();
-  if (!modelAcc.classList.contains('hidden')) toggelAccModel();
   if (!modelCart.classList.contains('hidden')) toggelCartModel();
 });
 
@@ -127,49 +84,6 @@ cartBtnClose.addEventListener('click', function (e) {
 });
 
 cartLink?.addEventListener('click', toggelCartModel);
-
-// when click on cheff login then random code generated for login
-let randomCode;
-loginCheff.addEventListener('click', function () {
-  toggelModel();
-  toggelCheffModel();
-  showSuccess(' You can close form by clicking outside the model');
-  randomCode = generateRandomCode();
-  code.textContent = +randomCode;
-});
-
-// when click on Accountant login then again random code generated for login
-loginAcc.addEventListener('click', function () {
-  toggelModel();
-  toggelAccModel();
-  showSuccess(' You can close form by clicking outside the model');
-  randomCode = generateRandomCode();
-  codeAcc.textContent = +randomCode;
-});
-
-// validating cheff login
-loginBtn.addEventListener('click', function () {
-  if (+randomCode !== +codeValid.value) {
-    showError('Please Enter Code correctly');
-  } else if (
-    cheffValid.value.trim() != 'cheff' &&
-    cheffValid.value.trim() != 'Cheff'
-  ) {
-    showError('Please Enter cheff correctly');
-  } else window.open('cheff.php', '_self');
-});
-
-// validating Accountant login
-loginBtnAcc.addEventListener('click', function () {
-  if (+randomCode !== +codeValidacc.value) {
-    showError('Please Enter Code correctly');
-  } else if (
-    accValid.value.trim() != 'accounts' &&
-    accValid.value.trim() != 'Accounts'
-  ) {
-    showError('Please Enter accounts correctly');
-  } else window.open('accountant.php', '_self');
-});
 
 // Rendering copyright year
 const year = new Date();
@@ -245,6 +159,16 @@ btnDisable.forEach(b => {
     e.preventDefault();
     showError('This Item is Out of Stock! ');
   });
+});
+
+// Logout the user
+btnLogout.addEventListener('click', function () {
+  window.open('main.php', '_self');
+});
+
+// update the user
+btnMyAcc.addEventListener('click', function () {
+  window.open('updateUser.php', '_self');
 });
 
 // Theme Management

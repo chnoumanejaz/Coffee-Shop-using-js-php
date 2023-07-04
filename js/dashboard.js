@@ -11,7 +11,7 @@ chkOrders?.addEventListener('click', function () {
   areaData.classList.remove('hidden');
 });
 btnLogout?.addEventListener('click', function () {
-  window.open('index.php', '_self');
+  window.open('main.php', '_self');
 });
 
 // for order confirm page button (Browse More)
@@ -30,4 +30,4 @@ const toggelDataModel = function () {
   dataModel.classList.toggle('hidden');
 };
 confirmOrder?.addEventListener('click', toggelDataModel);
-closeBtnData.addEventListener('click', toggelDataModel);
+closeBtnData?.addEventListener('click', toggelDataModel);
