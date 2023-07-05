@@ -27,7 +27,7 @@
                         <div class="divve">
                             <label for="username" class="labbell">User Name:</label>
                             <input type="text" value="<?php echo $row["username"]; ?>" class="model-cheff__input updateinp"
-                                name="username" id="username" disabled />
+                               style="color: #fff" name="username" id="username" disabled />
                         </div>
                         <div class="divve">
                             <label for="uname" class="labbell">Your Name:</label>
@@ -36,7 +36,7 @@
                         </div>
                         <div class="divve">
                             <label for="email" class="labbell">Your Email:</label>
-                            <input type="text" value="<?php echo $row["email"]; ?>" class="model-cheff__input updateinp"
+                            <input type="email" value="<?php echo $row["email"]; ?>" class="model-cheff__input updateinp"
                                 name="email" id="email" required/>
                         </div>
                         <div class="divve">
@@ -46,7 +46,7 @@
                         </div>
                         <div class="divve">
                             <label for="phone" class="labbell">Your Phone:</label>
-                            <input type="text" value="<?php echo $row["phone"]; ?>" class="model-cheff__input updateinp"
+                            <input type="number" value="<?php echo $row["phone"]; ?>" class="model-cheff__input updateinp"
                                 name="phone" id="phone" required/>
                         </div>
 

@@ -1,9 +1,6 @@
 <?php
 session_start();
 if (isset($_COOKIE['auth_token'])) {
-  //     $username = $_SESSION["username"];
-//     echo "<script>alert('Welcome, " . $username . " ! 😎')</script>";
-// }
   ?>
 
   <!DOCTYPE html>
@@ -51,10 +48,18 @@ if (isset($_COOKIE['auth_token'])) {
             <li class="nav__item">
               <a href="#footer" class="nav__link">About</a>
             </li>
-            <li class="nav__item">
-              <a href="#" class="nav__link myacc-btn no-wrap" style="padding: .5rem; border: 1px solid; border-radius: 10px;">My
-                Account</a>
-            </li>
+            <div class="dropdown__main">
+              <li class="nav__item">
+                <a href="#" class="nav__link myAccount no-wrap">My
+                  Account</a>                
+              </li>
+              <div class="dropdown__Account hidden">
+                <a href="#" class="nav__link myacc-btn no-wrap" style="padding: .5rem;">update</a>
+                <a href="#" class="nav__link myAccountDel no-wrap" style="padding: .5rem;">Delete</a>
+                <a href="#" class="nav__link myAccountCancle no-wrap" style="padding: .5rem;">Cancle</a>
+              </div>
+            </div>
+
             <li class="nav__item">
               <a href="#" class="nav__link logout-btn no-wrap">Logout
                 <svg class="svg-white">

@@ -171,6 +171,27 @@ btnMyAcc.addEventListener('click', function () {
   window.open('updateUser.php', '_self');
 });
 
+
+
+// account dropdown management
+
+const myAccount = document.querySelector('.myAccount');
+const myAccountCancle = document.querySelector('.myAccountCancle');
+const myAccountDel = document.querySelector('.myAccountDel');
+const dropdownAccount = document.querySelector('.dropdown__Account');
+
+const toggleAccountDropdown = function () {
+  myAccount.classList.toggle('hidden');
+  dropdownAccount.classList.toggle('hidden');
+}
+
+myAccount.addEventListener('click', toggleAccountDropdown)
+myAccountCancle.addEventListener('click', toggleAccountDropdown)
+myAccountDel.addEventListener('click', function () {
+  window.open('deleteAccount.php', '_self')
+})
+
+
 // Theme Management
 const themeSetting = document.querySelector('.themeSetting');
 const themeDrop = document.querySelector('.themeDrop');
@@ -198,7 +219,6 @@ themeSetting.addEventListener('click', function (e) {
 });
 
 const themeDropDown = document.querySelector('.themeDrop');
-
 themeDropDown.addEventListener('click', function (e) {
   if (e.target.closest('.BlackBtn')) {
     loadBlackTheme();

@@ -39,7 +39,7 @@ if (isset($_SESSION['cart'])) {
             </div>
             <div class="redirection">
                 <h3 class="re">
-                    We are Redirecting you to Main Page in 03 sec. . . 😉
+                    We are Redirecting you to Main Page in 1.5 sec. . . 😉
                 </h3>
             </div>
         </main>

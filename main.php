@@ -13,6 +13,7 @@ setcookie('user', '', time() - 3600, '/');
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Login to the Account</title>
   <link rel="stylesheet" href="css/index.css" />
+  <link rel="stylesheet" href="css/responsiveMain.css" />
 </head>
 
 <body>

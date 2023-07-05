@@ -20,7 +20,22 @@ body {
 /* Variables for All the colors */
 
 :root {
-    --PRIMARY-COLOR-DARK: rgb(221, 54, 236);
+    --PRIMARY-COLOR-DARK: rgb(12, 12, 12);
+    --PRIMARY-COLOR-DARK-OPAC: rgba(32, 32, 32, 0.911);
+    --PRIMARY-COLOR-LIGHT-OPAC: rgba(97, 97, 97, 0.781);
+    --PRIMARY-COLOR-LIGHT: rgb(97, 97, 97);
+    --PRIMARY-COLOR-LIGHT2: rgb(129, 129, 129);
+    --CART-COLOR: #acacac;
+
+    --BG-COLOR: rgb(189, 189, 189);
+
+    --LINEAR-LIGHT: rgb(170, 170, 170);
+    --LINEAR-DARK: rgba(0, 0, 0, 0.747);
+    --LINKEDIN: #fff;
+    --BOX-SHADOW: 0 10px 25px rgba(0, 0, 0, .2);
+    
+    /* // purple color */
+    /* --PRIMARY-COLOR-DARK: rgb(221, 54, 236);
     --PRIMARY-COLOR-DARK-OPAC: rgba(215, 54, 236, 0.911);
     --PRIMARY-COLOR-LIGHT-OPAC: rgba(223, 149, 241, 0.781);
     --PRIMARY-COLOR-LIGHT: rgb(226, 149, 241);
@@ -32,7 +47,7 @@ body {
     --LINEAR-LIGHT: rgba(127, 54, 145, 0.918);
     --LINEAR-DARK: rgba(0, 0, 0, 0.747);
     --LINKEDIN: #000;
-    --BOX-SHADOW: 0 10px 25px rgba(0, 0, 0, .2);
+    --BOX-SHADOW: 0 10px 25px rgba(0, 0, 0, .2); */
 }
 
 
@@ -46,12 +61,9 @@ body {
     z-index: 5;
 } */
 
-
-
 .section-heading {
     color: var(--PRIMARY-COLOR-DARK);
 }
-
 
 .nav {
     background-color: var(--PRIMARY-COLOR-DARK-OPAC);
@@ -960,4 +972,26 @@ td {
 }
 .updateinp{
     flex-grow: 1;
+}
+.logout-btn:hover{
+    color: red;
+}
+.dropdown__main{
+    position: relative;
+    transition: all .3s;
+}
+.dropdown__main:hover,
+.cartBtn:hover{
+    color: green;
+}
+.dropdown__Account{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+    position: absolute;
+    top: 0;
+    width: auto;
+    margin-left: -4rem;
+    transition: all .3s;
 }
